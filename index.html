@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="marketApp">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+    <script src="scripts/libraries/angular.min.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="app/app.js"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/modal.css">
+    <link rel="stylesheet" href="css/style(check).css">
+    <link rel="stylesheet" href="css/menu.css">
+</head>
+<body ng-controller="SvgController as svgCtrl">
+
+
+<!------------------------- MENU bar ------------------------->
+<div id="main_menu" class="topnav">
+    <div id="menu_items">
+        <span class="fa fa-bars"></span>
+        <!-- <a href="#" class="fa fa-bars"></a> -->
+        <a href="#filter" class="menu_labels">Фильтр</a>
+        <a href="#statistics" class="menu_labels" id="statisticsBtn">Статистика</a>
+        <a href="#dashboard" class="menu_labels">Личный кабинет</a>
+        <a href="#print" class="menu_labels" id="print">Печать</a>
+
+    </div>
+
+
+    <div id="toggle-wrapper">
+        <span id="map_label">Мини-карта</span>
+        <input type="checkbox" id="map_toggle">
+    </div>
+</div>
+
+<!------------------Car Market Layout------------------------->
+<!--SVG Big Map-->
+
+<div id="main-page-div">
+    <div id="scheme" >
+
+        <svg version="1.1" id="layer1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="960" height="560"
+	 viewBox="0 0 960 560" style="enable-background:new 0 0 960 560;" xml:space="preserve">
+<style type="text/css">
+
+</style>
+
+            <!-- upper row of lots-->
+
+
+
+            <!-- Line - 1st row of lots -->
+<line class="st1 avenue" x1="22.5" y1="15.5" x2="932.5" y2="15.5"/>
+
+            <!-- lines 1st row -->
+<line class="st1 street" x1="22.5" y1="15.5" x2="22.5" y2="58"/>
+<line class="st1 street" x1="57.5" y1="15.5" x2="57.5" y2="58"/>
+<line class="st1 street" x1="92.5" y1="15.5" x2="92.5" y2="58"/>
+<line class="st1 street" x1="127.5" y1="15.5" x2="127.5" y2="58"/>
+<line class="st1 street" x1="162.5" y1="15.5" x2="162.5" y2="58"/>
+<line class="st1 street" x1="197.5" y1="15.5" x2="197.5" y2="58"/>
+<line class="st1 street" x1="232.5" y1="15.5" x2="232.5" y2="58"/>
+<line class="st1 street" x1="267.5" y1="15.5" x2="267.5" y2="58"/>
+<line class="st1 street" x1="302.5" y1="15.5" x2="302.5" y2="58"/>
+<line class="st1 street" x1="337.5" y1="15.5" x2="337.5" y2="58"/>
+<line class="st1 street" x1="372.5" y1="15.5" x2="372.5" y2="58"/>
+<line class="st1 street" x1="407.5" y1="15.5" x2="407.5" y2="58"/>
+<line class="st1 street" x1="442.5" y1="15.5" x2="442.5" y2="58"/>
+<line class="st1 street" x1="477.5" y1="15.5" x2="477.5" y2="58"/>
+<line class="st1 street" x1="512.5" y1="15.5" x2="512.5" y2="58"/>
+<line class="st1 street" x1="547.5" y1="15.5" x2="547.5" y2="58"/>
+<line class="st1 street" x1="582.5" y1="15.5" x2="582.5" y2="58"/>
+<line class="st1 street" x1="617.5" y1="15.5" x2="617.5" y2="58"/>
+<line class="st1 street" x1="652.5" y1="15.5" x2="652.5" y2="58"/>
+<line class="st1 street" x1="687.5" y1="15.5" x2="687.5" y2="58"/>
+<line class="st1 street" x1="722.5" y1="15.5" x2="722.5" y2="58"/>
+<line class="st1 street" x1="757.5" y1="15.5" x2="757.5" y2="58"/>
+<line class="st1 street" x1="792.5" y1="15.5" x2="792.5" y2="58"/>
+<line class="st1 street" x1="827.5" y1="15.5" x2="827.5" y2="58"/>
+<line class="st1 street" x1="862.5" y1="15.5" x2="862.5" y2="58"/>
+<line class="st1 street" x1="897.5" y1="15.5" x2="897.5" y2="58"/>
+<line class="st1 street" x1="932.5" y1="15.5" x2="932.5" y2="58"/>
+
+
+            <!-- Line - 2nd row of lots  delta= 127-->
+<line class="st1 avenue" x1="22.5" y1="142.5" x2="932.5" y2="142.5"/>
+            <!-- lines 2nd row upper-->
+<line class="st1 street" x1="22.5" y1="100" x2="22.5" y2="142.5"/>
+<line class="st1 street" x1="57.5" y1="100" x2="57.5" y2="142.5"/>
+<line class="st1 street" x1="92.5" y1="100" x2="92.5" y2="142.5"/>
+<line class="st1 street" x1="127.5" y1="100" x2="127.5" y2="142.5"/>
+<line class="st1 street" x1="162.5" y1="100" x2="162.5" y2="142.5"/>
+<line class="st1 street" x1="197.5" y1="100" x2="197.5" y2="142.5"/>
+<line class="st1 street" x1="232.5" y1="100" x2="232.5" y2="142.5"/>
+<line class="st1 street" x1="267.5" y1="100" x2="267.5" y2="142.5"/>
+<line class="st1 street" x1="302.5" y1="100" x2="302.5" y2="142.5"/>
+<line class="st1 street" x1="337.5" y1="100" x2="337.5" y2="142.5"/>
+<line class="st1 street" x1="372.5" y1="100" x2="372.5" y2="142.5"/>
+<line class="st1 street" x1="407.5" y1="100" x2="407.5" y2="142.5"/>
+<line class="st1 street" x1="442.5" y1="100" x2="442.5" y2="142.5"/>
+<line class="st1 street" x1="477.5" y1="100" x2="477.5" y2="142.5"/>
+<line class="st1 street" x1="512.5" y1="100" x2="512.5" y2="142.5"/>
+<line class="st1 street" x1="547.5" y1="100" x2="547.5" y2="142.5"/>
+<line class="st1 street" x1="582.5" y1="100" x2="582.5" y2="142.5"/>
+<line class="st1 street" x1="617.5" y1="100" x2="617.5" y2="142.5"/>
+<line class="st1 street" x1="652.5" y1="100" x2="652.5" y2="142.5"/>
+<line class="st1 street" x1="687.5" y1="100" x2="687.5" y2="142.5"/>
+<line class="st1 street" x1="722.5" y1="100" x2="722.5" y2="142.5"/>
+<line class="st1 street" x1="757.5" y1="100" x2="757.5" y2="142.5"/>
+<line class="st1 street" x1="792.5" y1="100" x2="792.5" y2="142.5"/>
+<line class="st1 street" x1="827.5" y1="100" x2="827.5" y2="142.5"/>
+<line class="st1 street" x1="862.5" y1="100" x2="862.5" y2="142.5"/>
+<line class="st1 street" x1="897.5" y1="100" x2="897.5" y2="142.5"/>
+<line class="st1 street" x1="932.5" y1="100" x2="932.5" y2="142.5"/>
+            <!-- lines 2nd row lower-->
+<line class="st1 street" x1="22.5" y1="142.5" x2="22.5" y2="185"/>
+<line class="st1 street" x1="57.5" y1="142.5" x2="57.5" y2="185"/>
+<line class="st1 street" x1="92.5" y1="142.5" x2="92.5" y2="185"/>
+<line class="st1 street" x1="127.5" y1="142.5" x2="127.5" y2="185"/>
+<line class="st1 street" x1="162.5" y1="142.5" x2="162.5" y2="185"/>
+<line class="st1 street" x1="197.5" y1="142.5" x2="197.5" y2="185"/>
+<line class="st1 street" x1="232.5" y1="142.5" x2="232.5" y2="185"/>
+<line class="st1 street" x1="267.5" y1="142.5" x2="267.5" y2="185"/>
+<line class="st1 street" x1="302.5" y1="142.5" x2="302.5" y2="185"/>
+<line class="st1 street" x1="337.5" y1="142.5" x2="337.5" y2="185"/>
+<line class="st1 street" x1="372.5" y1="142.5" x2="372.5" y2="185"/>
+<line class="st1 street" x1="407.5" y1="142.5" x2="407.5" y2="185"/>
+<line class="st1 street" x1="442.5" y1="142.5" x2="442.5" y2="185"/>
+<line class="st1 street" x1="477.5" y1="142.5" x2="477.5" y2="185"/>
+<line class="st1 street" x1="512.5" y1="142.5" x2="512.5" y2="185"/>
+<line class="st1 street" x1="547.5" y1="142.5" x2="547.5" y2="185"/>
+<line class="st1 street" x1="582.5" y1="142.5" x2="582.5" y2="185"/>
+<line class="st1 street" x1="617.5" y1="142.5" x2="617.5" y2="185"/>
+<line class="st1 street" x1="652.5" y1="142.5" x2="652.5" y2="185"/>
+<line class="st1 street" x1="687.5" y1="142.5" x2="687.5" y2="185"/>
+<line class="st1 street" x1="722.5" y1="142.5" x2="722.5" y2="185"/>
+<line class="st1 street" x1="757.5" y1="142.5" x2="757.5" y2="185"/>
+<line class="st1 street" x1="792.5" y1="142.5" x2="792.5" y2="185"/>
+<line class="st1 street" x1="827.5" y1="142.5" x2="827.5" y2="185"/>
+<line class="st1 street" x1="862.5" y1="142.5" x2="862.5" y2="185"/>
+<line class="st1 street" x1="897.5" y1="142.5" x2="897.5" y2="185"/>
+<line class="st1 street" x1="932.5" y1="142.5" x2="932.5" y2="185"/>
+
+
+
+
+            <!-- Line - 3rd row of lots -->
+<line class="st1 avenue" x1="22.5" y1="275.5" x2="932.5" y2="275.5"/>
+            <!-- lines 3rd row upper-->
+<line class="st1 street" x1="22.5" y1="233" x2="22.5" y2="275.5"/>
+<line class="st1 street" x1="57.5" y1="233" x2="57.5" y2="275.5"/>
+<line class="st1 street" x1="92.5" y1="233" x2="92.5" y2="275.5"/>
+<line class="st1 street" x1="127.5" y1="233" x2="127.5" y2="275.5"/>
+<line class="st1 street" x1="162.5" y1="233" x2="162.5" y2="275.5"/>
+<line class="st1 street" x1="197.5" y1="233" x2="197.5" y2="275.5"/>
+<line class="st1 street" x1="232.5" y1="233" x2="232.5" y2="275.5"/>
+<line class="st1 street" x1="267.5" y1="233" x2="267.5" y2="275.5"/>
+<line class="st1 street" x1="302.5" y1="233" x2="302.5" y2="275.5"/>
+<line class="st1 street" x1="337.5" y1="233" x2="337.5" y2="275.5"/>
+<line class="st1 street" x1="372.5" y1="233" x2="372.5" y2="275.5"/>
+<line class="st1 street" x1="407.5" y1="233" x2="407.5" y2="275.5"/>
+<line class="st1 street" x1="442.5" y1="233" x2="442.5" y2="275.5"/>
+<line class="st1 street" x1="477.5" y1="233" x2="477.5" y2="275.5"/>
+<line class="st1 street" x1="512.5" y1="233" x2="512.5" y2="275.5"/>
+<line class="st1 street" x1="547.5" y1="233" x2="547.5" y2="275.5"/>
+<line class="st1 street" x1="582.5" y1="233" x2="582.5" y2="275.5"/>
+<line class="st1 street" x1="617.5" y1="233" x2="617.5" y2="275.5"/>
+<line class="st1 street" x1="652.5" y1="233" x2="652.5" y2="275.5"/>
+<line class="st1 street" x1="687.5" y1="233" x2="687.5" y2="275.5"/>
+<line class="st1 street" x1="722.5" y1="233" x2="722.5" y2="275.5"/>
+<line class="st1 street" x1="757.5" y1="233" x2="757.5" y2="275.5"/>
+<line class="st1 street" x1="792.5" y1="233" x2="792.5" y2="275.5"/>
+<line class="st1 street" x1="827.5" y1="233" x2="827.5" y2="275.5"/>
+<line class="st1 street" x1="862.5" y1="233" x2="862.5" y2="275.5"/>
+<line class="st1 street" x1="897.5" y1="233" x2="897.5" y2="275.5"/>
+<line class="st1 street" x1="932.5" y1="233" x2="932.5" y2="275.5"/>
+            <!-- lines 3rd row lower-->
+<line class="st1 street" x1="22.5" y1="275.5" x2="22.5" y2="318"/>
+<line class="st1 street" x1="57.5" y1="275.5" x2="57.5" y2="318"/>
+<line class="st1 street" x1="92.5" y1="275.5" x2="92.5" y2="318"/>
+<line class="st1 street" x1="127.5" y1="275.5" x2="127.5" y2="318"/>
+<line class="st1 street" x1="162.5" y1="275.5" x2="162.5" y2="318"/>
+<line class="st1 street" x1="197.5" y1="275.5" x2="197.5" y2="318"/>
+<line class="st1 street" x1="232.5" y1="275.5" x2="232.5" y2="318"/>
+<line class="st1 street" x1="267.5" y1="275.5" x2="267.5" y2="318"/>
+<line class="st1 street" x1="302.5" y1="275.5" x2="302.5" y2="318"/>
+<line class="st1 street" x1="337.5" y1="275.5" x2="337.5" y2="318"/>
+<line class="st1 street" x1="372.5" y1="275.5" x2="372.5" y2="318"/>
+<line class="st1 street" x1="407.5" y1="275.5" x2="407.5" y2="318"/>
+<line class="st1 street" x1="442.5" y1="275.5" x2="442.5" y2="318"/>
+<line class="st1 street" x1="477.5" y1="275.5" x2="477.5" y2="318"/>
+<line class="st1 street" x1="512.5" y1="275.5" x2="512.5" y2="318"/>
+<line class="st1 street" x1="547.5" y1="275.5" x2="547.5" y2="318"/>
+<line class="st1 street" x1="582.5" y1="275.5" x2="582.5" y2="318"/>
+<line class="st1 street" x1="617.5" y1="275.5" x2="617.5" y2="318"/>
+<line class="st1 street" x1="652.5" y1="275.5" x2="652.5" y2="318"/>
+<line class="st1 street" x1="687.5" y1="275.5" x2="687.5" y2="318"/>
+<line class="st1 street" x1="722.5" y1="275.5" x2="722.5" y2="318"/>
+<line class="st1 street" x1="757.5" y1="275.5" x2="757.5" y2="318"/>
+<line class="st1 street" x1="792.5" y1="275.5" x2="792.5" y2="318"/>
+<line class="st1 street" x1="827.5" y1="275.5" x2="827.5" y2="318"/>
+<line class="st1 street" x1="862.5" y1="275.5" x2="862.5" y2="318"/>
+<line class="st1 street" x1="897.5" y1="275.5" x2="897.5" y2="318"/>
+<line class="st1 street" x1="932.5" y1="275.5" x2="932.5" y2="318"/>
+
+
+
+
+
+            <!-- Line - 4th row of lots -->
+<line class="st1 avenue" x1="22.5" y1="408.5" x2="932.5" y2="408.5"/>
+            <!-- lines 4th row upper-->
+<line class="st1 street" x1="22.5" y1="366" x2="22.5" y2="408.5"/>
+<line class="st1 street" x1="57.5" y1="366" x2="57.5" y2="408.5"/>
+<line class="st1 street" x1="92.5" y1="366" x2="92.5" y2="408.5"/>
+<line class="st1 street" x1="127.5" y1="366" x2="127.5" y2="408.5"/>
+<line class="st1 street" x1="162.5" y1="366" x2="162.5" y2="408.5"/>
+<line class="st1 street" x1="197.5" y1="366" x2="197.5" y2="408.5"/>
+<line class="st1 street" x1="232.5" y1="366" x2="232.5" y2="408.5"/>
+<line class="st1 street" x1="267.5" y1="366" x2="267.5" y2="408.5"/>
+<line class="st1 street" x1="302.5" y1="366" x2="302.5" y2="408.5"/>
+<line class="st1 street" x1="337.5" y1="366" x2="337.5" y2="408.5"/>
+<line class="st1 street" x1="372.5" y1="366" x2="372.5" y2="408.5"/>
+<line class="st1 street" x1="407.5" y1="366" x2="407.5" y2="408.5"/>
+<line class="st1 street" x1="442.5" y1="366" x2="442.5" y2="408.5"/>
+<line class="st1 street" x1="477.5" y1="366" x2="477.5" y2="408.5"/>
+<line class="st1 street" x1="512.5" y1="366" x2="512.5" y2="408.5"/>
+<line class="st1 street" x1="547.5" y1="366" x2="547.5" y2="408.5"/>
+<line class="st1 street" x1="582.5" y1="366" x2="582.5" y2="408.5"/>
+<line class="st1 street" x1="617.5" y1="366" x2="617.5" y2="408.5"/>
+<line class="st1 street" x1="652.5" y1="366" x2="652.5" y2="408.5"/>
+<line class="st1 street" x1="687.5" y1="366" x2="687.5" y2="408.5"/>
+<line class="st1 street" x1="722.5" y1="366" x2="722.5" y2="408.5"/>
+<line class="st1 street" x1="757.5" y1="366" x2="757.5" y2="408.5"/>
+<line class="st1 street" x1="792.5" y1="366" x2="792.5" y2="408.5"/>
+<line class="st1 street" x1="827.5" y1="366" x2="827.5" y2="408.5"/>
+<line class="st1 street" x1="862.5" y1="366" x2="862.5" y2="408.5"/>
+<line class="st1 street" x1="897.5" y1="366" x2="897.5" y2="408.5"/>
+<line class="st1 street" x1="932.5" y1="366" x2="932.5" y2="408.5"/>
+            <!-- lines 4th row lower-->
+<line class="st1 street" x1="22.5" y1="408.5" x2="22.5" y2="451"/>
+<line class="st1 street" x1="57.5" y1="408.5" x2="57.5" y2="451"/>
+<line class="st1 street" x1="92.5" y1="408.5" x2="92.5" y2="451"/>
+<line class="st1 street" x1="127.5" y1="408.5" x2="127.5" y2="451"/>
+<line class="st1 street" x1="162.5" y1="408.5" x2="162.5" y2="451"/>
+<line class="st1 street" x1="197.5" y1="408.5" x2="197.5" y2="451"/>
+<line class="st1 street" x1="232.5" y1="408.5" x2="232.5" y2="451"/>
+<line class="st1 street" x1="267.5" y1="408.5" x2="267.5" y2="451"/>
+<line class="st1 street" x1="302.5" y1="408.5" x2="302.5" y2="451"/>
+<line class="st1 street" x1="337.5" y1="408.5" x2="337.5" y2="451"/>
+<line class="st1 street" x1="372.5" y1="408.5" x2="372.5" y2="451"/>
+<line class="st1 street" x1="407.5" y1="408.5" x2="407.5" y2="451"/>
+<line class="st1 street" x1="442.5" y1="408.5" x2="442.5" y2="451"/>
+<line class="st1 street" x1="477.5" y1="408.5" x2="477.5" y2="451"/>
+<line class="st1 street" x1="512.5" y1="408.5" x2="512.5" y2="451"/>
+<line class="st1 street" x1="547.5" y1="408.5" x2="547.5" y2="451"/>
+<line class="st1 street" x1="582.5" y1="408.5" x2="582.5" y2="451"/>
+<line class="st1 street" x1="617.5" y1="408.5" x2="617.5" y2="451"/>
+<line class="st1 street" x1="652.5" y1="408.5" x2="652.5" y2="451"/>
+<line class="st1 street" x1="687.5" y1="408.5" x2="687.5" y2="451"/>
+<line class="st1 street" x1="722.5" y1="408.5" x2="722.5" y2="451"/>
+<line class="st1 street" x1="757.5" y1="408.5" x2="757.5" y2="451"/>
+<line class="st1 street" x1="792.5" y1="408.5" x2="792.5" y2="451"/>
+<line class="st1 street" x1="827.5" y1="408.5" x2="827.5" y2="451"/>
+<line class="st1 street" x1="862.5" y1="408.5" x2="862.5" y2="451"/>
+<line class="st1 street" x1="897.5" y1="408.5" x2="897.5" y2="451"/>
+<line class="st1 street" x1="932.5" y1="408.5" x2="932.5" y2="451"/>
+
+
+
+            <!-- Line - 5th row of lots -->
+<line class="st1 avenue" x1="22.5" y1="541.5" x2="932.5" y2="541.5"/>
+            <!-- lines 5th row -->
+<line class="st1 street" x1="22.5" y1="499" x2="22.5" y2="541.5"/>
+<line class="st1 street" x1="57.5" y1="499" x2="57.5" y2="541.5"/>
+<line class="st1 street" x1="92.5" y1="499" x2="92.5" y2="541.5"/>
+<line class="st1 street" x1="127.5" y1="499" x2="127.5" y2="541.5"/>
+<line class="st1 street" x1="162.5" y1="499" x2="162.5" y2="541.5"/>
+<line class="st1 street" x1="197.5" y1="499" x2="197.5" y2="541.5"/>
+<line class="st1 street" x1="232.5" y1="499" x2="232.5" y2="541.5"/>
+<line class="st1 street" x1="267.5" y1="499" x2="267.5" y2="541.5"/>
+<line class="st1 street" x1="302.5" y1="499" x2="302.5" y2="541.5"/>
+<line class="st1 street" x1="337.5" y1="499" x2="337.5" y2="541.5"/>
+<line class="st1 street" x1="372.5" y1="499" x2="372.5" y2="541.5"/>
+<line class="st1 street" x1="407.5" y1="499" x2="407.5" y2="541.5"/>
+<line class="st1 street" x1="442.5" y1="499" x2="442.5" y2="541.5"/>
+<line class="st1 street" x1="477.5" y1="499" x2="477.5" y2="541.5"/>
+<line class="st1 street" x1="512.5" y1="499" x2="512.5" y2="541.5"/>
+<line class="st1 street" x1="547.5" y1="499" x2="547.5" y2="541.5"/>
+<line class="st1 street" x1="582.5" y1="499" x2="582.5" y2="541.5"/>
+<line class="st1 street" x1="617.5" y1="499" x2="617.5" y2="541.5"/>
+<line class="st1 street" x1="652.5" y1="499" x2="652.5" y2="541.5"/>
+<line class="st1 street" x1="687.5" y1="499" x2="687.5" y2="541.5"/>
+<line class="st1 street" x1="722.5" y1="499" x2="722.5" y2="541.5"/>
+<line class="st1 street" x1="757.5" y1="499" x2="757.5" y2="541.5"/>
+<line class="st1 street" x1="792.5" y1="499" x2="792.5" y2="541.5"/>
+<line class="st1 street" x1="827.5" y1="499" x2="827.5" y2="541.5"/>
+<line class="st1 street" x1="862.5" y1="499" x2="862.5" y2="541.5"/>
+<line class="st1 street" x1="897.5" y1="499" x2="897.5" y2="541.5"/>
+<line class="st1 street" x1="932.5" y1="499" x2="932.5" y2="541.5"/>
+</svg>
+
+
+    </div>
+
+
+
+
+
+    <!--Canvas MiniMap-->
+    <canvas id ="minimap-background" height="175" width="300">
+    </canvas>
+    <canvas id ="minimap-viewport" height="175" width="300">
+    </canvas>
+
+    <!--zoom buttons-->
+    <div id="button_wrapper">
+        <button class="zoom_buttons" id="plus">+</button>
+        <button class="zoom_buttons" id="minus">-</button>
+        <button id="reset">Reset</button>
+    </div>
+
+</div>
+
+
+    <!------------------------------MODALS------------------------>
+    <!--Car Info Modal-->
+    <div class="modal" id="car-modal" >
+        <div class="modal-content">
+            <span class="close">x</span>
+
+            <car-modal></car-modal>
+
+
+        </div>
+    </div>
+
+    <!--Filter Modal-->
+    <div class="modal" id="filter-modal" >
+        <div class="modal-content">
+            <span class="close">x</span>
+            <table>
+                <tr>
+                    <td> <span class="filter-line text-line">Модель</span></td>
+                    <td><select class="filter-line" name="brand" id="brand"><option value="brand"></option></select></td>
+                </tr>
+                <tr>
+                    <td><span class="filter-line text-line">Модель</span></td>
+                    <td><select class="filter-line" name="model" id="model"></select></td>
+                </tr>
+                <tr>
+                    <td><span class="filter-line text-line">Год выпуска</span></td>
+                    <td>   <span>от</span><select class="filter-year" name="yearFrom" id="yearFrom">
+                        <option value="year"></option>
+                        <option value="year">2017</option>
+                        <option value="year">2016</option>
+                        <option value="year">2015</option>
+                        <option value="year">2014</option>
+                        <option value="year">2013</option>
+                        <option value="year">2012</option>
+                        <option value="year">2011</option>
+                        <option value="year">2010</option>
+                        <option value="year">2009</option>
+                        <option value="year">2008</option>
+                        <option value="year">2007</option>
+                        <option value="year">2006</option>
+                        <option value="year">2005</option>
+                        <option value="year">2004</option>
+                        <option value="year">2003</option>
+                        <option value="year">2002</option>
+                        <option value="year">2001</option>
+                        <option value="year">2000</option>
+                        <option value="year">1999</option>
+                        <option value="year">1998</option>
+                        <option value="year">1997</option>
+                        <option value="year">1996</option>
+                        <option value="year">1995</option>
+                        <option value="year">1994</option>
+                        <option value="year">1993</option>
+                        <option value="year">1992</option>
+                        <option value="year">1991</option>
+                        <option value="year">1990</option>
+                        <option value="year">1989</option>
+                        <option value="year">1988</option>
+                        <option value="year">1987</option>
+                        <option value="year">1986</option>
+                        <option value="year">1985</option>
+                        <option value="year">1984</option>
+                        <option value="year">1983</option>
+                        <option value="year">1982</option>
+                        <option value="year">1981</option>
+                        <option value="year">1980</option>
+
+
+                    </select>
+                        <span>до</span><select class="filter-year" name="yearTo" id="yearTo">
+                            <option value="year"></option>
+                            <option value="year">2017</option>
+                            <option value="year">2016</option>
+                            <option value="year">2015</option>
+                            <option value="year">2014</option>
+                            <option value="year">2013</option>
+                            <option value="year">2012</option>
+                            <option value="year">2011</option>
+                            <option value="year">2010</option>
+                            <option value="year">2009</option>
+                            <option value="year">2008</option>
+                            <option value="year">2007</option>
+                            <option value="year">2006</option>
+                            <option value="year">2005</option>
+                            <option value="year">2004</option>
+                            <option value="year">2003</option>
+                            <option value="year">2002</option>
+                            <option value="year">2001</option>
+                            <option value="year">2000</option>
+                            <option value="year">1999</option>
+                            <option value="year">1998</option>
+                            <option value="year">1997</option>
+                            <option value="year">1996</option>
+                            <option value="year">1995</option>
+                            <option value="year">1994</option>
+                            <option value="year">1993</option>
+                            <option value="year">1992</option>
+                            <option value="year">1991</option>
+                            <option value="year">1990</option>
+                            <option value="year">1989</option>
+                            <option value="year">1988</option>
+                            <option value="year">1987</option>
+                            <option value="year">1986</option>
+                            <option value="year">1985</option>
+                            <option value="year">1984</option>
+                            <option value="year">1983</option>
+                            <option value="year">1982</option>
+                            <option value="year">1981</option>
+                            <option value="year">1980</option>
+
+                        </select></td>
+                </tr>
+                <tr>
+                    <td> <span class="filter-line text-line">Пробег</span></td>
+                    <td><select class="filter-line" name="mileage" id="mileage">
+                        <option value="mileage"></option>
+                        <option value="mileage">50000</option>
+                        <option value="mileage">100000</option>
+                        <option value="mileage">150000</option>
+                        <option value="mileage">200000</option>
+                        <option value="mileage">250000</option>
+                        <option value="mileage">300000</option>
+                        <option value="mileage">350000</option>
+
+
+
+                    </select></td>
+                </tr>
+                <tr>
+                    <td><span class="filter-line text-line">Тип двигателя</span></td>
+                    <td> <select class="filter-line" name="engine" id="engine">
+                        <option value=""></option>
+
+                    </select></td>
+                </tr>
+                <tr>
+                    <td> <span class="filter-line text-line">Трансмиссия</span></td>
+                    <td> <select class="filter-line" name="transmission" id="transmission">
+                        <option value="transmission"></option>
+                    </select></td>
+                </tr>
+                <tr>
+                    <td> <span class="filter-line text-line">Цвет</span></td>
+                    <td><select class="filter-line" name="color" id="color">
+                        <option value="color"></option>
+                    </select></td>
+                </tr>
+                <tr>
+                    <td><span class="filter-line text-line">Цена</span></td>
+                    <td><span>от</span><input class="filter-line" type="number" id="priceFrom"><span>до</span><input class="filter-line" type="number" id="priceTo"></td>
+                </tr>
+            </table>
+            <button id="apply-filter">Применить фильтр</button>
+            <button id="reset-filter">Сбросить фильтр</button>
+        </div>
+
+
+
+    </div>
+
+<!--Statistics Modal-->
+<div class="modal" id="statistics-modal" >
+    <div class="modal-content">
+        <span class="close">x</span>
+
+        <div>
+            <h1>Сейчас машин на рынке: {{carCounter}}</h1>
+        </div>
+<table>
+    <tr>
+        <td>
+            <div class="bar-chart">
+            <canvas height="300" width="300" id="chart-bar1"></canvas>
+
+            </div>
+        </td>
+
+        <td>
+            <div class="bar-chart">
+                <canvas height="300" width="300" id="chart-bar2"></canvas>
+
+            </div>
+        </td>
+    </tr>
+
+</table>
+
+        <div class="pie-chart">
+            <h2>Марки авто</h2>
+            <canvas height="350" width="350" id="chart-pie"></canvas>
+
+        </div>
+
+    </div>
+</div>
+
+
+
+
+<!--Dashboard Modal-->
+<div class="modal" id="dashboard-modal" >
+    <div class="modal-content" id="dashboard-div">
+        <span class="close">x</span>
+
+        <div id="dashboard_scheme">
+
+            <svg version="1.1" id="layer2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="850" height="220"
+	 viewBox="0 0 825 220" style="enable-background:new 0 0 600 469; border: solid black 1px" xml:space="preserve" >
+
+            </svg>
+
+        </div>
+
+        <dashboard-directive></dashboard-directive>
+
+
+    </div>
+</div>
+
+<!----------------------END MODALS---------------------->
+<div id="printable-div">
+    <span class="filter-label">Параметры фильтра</span>
+    <p id="printable-data"></p>
+
+</div>
+
+
+<script src="scripts/rect_builder.js"></script>
+<script src="scripts/minimap.js"></script>
+<script src="scripts/car_info_modal.js"></script>
+<script src="scripts/cars.js"></script>
+<script src="scripts/car_lots.js"></script>
+<script src="scripts/selection.js"></script>
+<script src="scripts/filter.js"></script>
+<script src="scripts/statistics.js"></script>
+<script src="scripts/print.js"></script>
+<script src="scripts/spa.js"></script>
+<script src="scripts/dashboard_scheme.js"></script>
+
+</body>
+</html>

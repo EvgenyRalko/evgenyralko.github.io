@@ -1,0 +1,260 @@
+#modal {
+    font-family: sans-serif;
+    border: 1px solid darkblue;
+    margin: 5% 17%;
+}
+
+#context {
+    margin: 20px;
+}
+
+#upper-row, #lower-rows {
+    width: 100%;
+}
+
+
+#imageDiv, #detailsDiv {
+    display: inline-block;
+}
+
+#detailsDiv {
+    position: absolute;
+    margin: -25px 60px;
+}
+
+#priceDiv {
+    margin-top: 20px;
+}
+
+#lower-rows {
+    display: block;
+}
+
+#contacts-wrapper {
+    display: inline;
+}
+
+h1,h2,h3 {
+    color: rgb(52, 79, 124);
+}
+
+.contacts-icon {
+    font-size: 20px;
+}
+
+td {
+    width: 200px;
+}
+
+#price {
+    font-size: 1.5em;
+}
+
+.car_details {
+    display: block;
+    margin-left: 30px;
+}
+
+.filter-element {
+    margin-top: 10px;
+
+}
+
+
+#filter-div {
+    float: left;
+    border: 1px black solid;
+    position: absolute;
+    top: 64px;
+    left: 1003px;
+    height: 423px;
+    width: 315px;
+}
+
+select.filter-line {
+    width: 158px;
+}
+
+.filter-year {
+    width: 60px;
+}
+
+input.filter-line {
+    width: 58px;
+}
+
+#scheme {
+    text-align: center;
+}
+
+
+.bar-chart {
+    height: 300px;
+    width: 300px;
+}
+
+
+.pie-chart {
+    margin: 0 auto;
+    text-align: center;
+    height: 300px;
+    width: 300px;
+    padding-bottom: 45px;
+}
+
+
+@media print {
+    body * {
+        visibility: hidden;
+    }
+    #scheme, #scheme *, #printable-div, #printable-div * {
+        visibility: visible;
+    }
+
+
+    #scheme {
+        position: absolute;
+        left: 0;
+        top: 0;
+    }
+
+    #printable-div {
+        left: 0;
+        top: 650px;
+        position: absolute;
+    }
+
+}
+
+#printable-div {
+    visibility: hidden;
+    width: 970px;
+    border:1px solid black;
+}
+
+.print-data {
+    font-size: 20px;
+    margin-right: 25px;
+    font-family: sans-serif;
+}
+
+.filter-label {
+    font-size: 25px;
+    font-family: sans-serif;
+}
+
+.rect-style {
+    fill: rgba(255, 255, 255, .3);
+    stroke: gray;
+}
+
+#main-page-div {
+    position: relative;
+    margin: 0 auto;
+    width: 1250px;
+    height: 584px;
+}
+
+g:hover .rect-style{
+    fill: rgba(255, 255, 255, .9);
+    stroke: gray;
+}
+
+.group-style:hover {
+    cursor: pointer;
+
+}
+
+
+.num-style {
+    fill:rgba(0, 0, 0, .6);
+    user-select: none;
+    font-family: sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.selected {
+    fill: rgba(244, 232, 66, .9);
+    stroke: gray;
+}
+
+#layer1 {
+    background-image: url('../images/asphalt_texture_small_light.jpg');
+}
+
+.st1 {
+    stroke: rgba(244, 232, 66, .99);
+    stroke-width: 2px;
+    stroke-linecap: round;
+}
+
+
+.change-image{
+    width: 30%;
+    height: 100%;
+    position: absolute;
+}
+
+#image-wrapper{
+    height: 248px;
+    width: 320px;
+    position: relative;
+    user-select: none;
+}
+
+.slider-buttons {
+    width: 25%;
+    height:100%;
+    position: absolute;
+    z-index: 11;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#slide-left:hover{
+    background-image: url("../images/icons/arrow_left.png");
+    cursor: pointer;
+}
+
+#slide-right:hover {
+    background-image: url("../images/icons/arrow_right.png");
+    cursor: pointer;
+}
+
+#slide-left{
+    left:0;
+}
+
+#slide-right{
+    right:0;
+}
+
+#image{
+    position:absolute;
+}
+
+#dashboard-div {
+    width:900px;
+}
+
+
+
+text{
+    z-index: 11;
+}
+
+
+#dialog-box {
+    z-index: 12;
+}
+
+.dashRectSelected {
+    fill: rgba(37, 183, 34, 0.3);
+    stroke: rgba(37, 183, 34, 1);
+}
+
+.dashboard-rect{
+    fill: rgba(255, 255, 255, .3);
+    stroke: gray;
+}

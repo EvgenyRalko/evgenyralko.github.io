@@ -1,0 +1,85 @@
+<!--<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+
+        rect{
+            fill: rgba(255, 255, 255, .3);
+            stroke: gray;
+        }
+        text{
+            z-index: 11;
+        }
+
+        .no-close .ui-dialog-titlebar-close {
+            display: none;
+        }
+
+    </style>
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+</head>
+<body>
+
+<div id="dashboard_scheme">
+
+    <svg version="1.1" id="layer2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="850" height="220"
+	 viewBox="0 0 825 220" style="enable-background:new 0 0 600 469; border: solid black 1px" xml:space="preserve" >
+
+</svg>
+
+</div>
+-->
+
+<div>
+    <button ng-click="">Clear the lot</button>
+    <button>Add a car</button>
+</div>
+
+<div id="dialog-box-true" class="dialog-box" ng-show="theCar.hasOwnProperty('id')">
+    <h2>Выбрано место {{selectedItem +1}}</h2>
+    <strong>{{theCar.brand}} {{theCar.model}}</strong>
+    <span>Номер: {{theCar.id}}</span>
+</div>
+
+
+
+<div id="searchbox">
+    <div>
+        <input type="text" ng-model="search" placeholder="Поиск по госномеру">
+
+    </div>
+    <div>
+        <select name="" id="" size="5">
+        <option value="1" ng-repeat="vehicle in dash.allVehicles | filter: search">{{dash.allVehicles.indexOf(vehicle)+1}}.  {{vehicle.id}} <span>   </span>{{vehicle.brand}} {{vehicle.model}} {{vehicle.color}}</option>
+
+        </select>
+
+        <div>
+
+            <span>Select the lot you want to add the car to</span><select name="" id="lotSelector">
+                <option value="">Lot 1</option>
+                <option value="">Lot 2</option>
+                <option value="">Lot 3</option>
+            </select>
+            <button> Add the car</button>
+
+        </div>
+
+
+
+    </div>
+
+
+</div>
+
+
+<!--
+<script src="../scripts/dashboard_scheme.js"></script>
+
+
+</body>
+</html>-->

@@ -1,0 +1,60 @@
+.menu_labels {
+
+    cursor: pointer;
+}
+
+#map_label, #toggle-wrapper {
+    cursor: context-menu;
+}
+
+
+.topnav {
+    position: relative;
+    background-color: #333;
+    overflow: hidden;
+    margin-bottom: 15px;
+    box-sizing: border-box;
+    font-family:sans-serif;
+}
+
+.topnav a, #map_label, .fa-bars {
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+.topnav .menu_labels:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+.topnav a.active {
+    background-color: #4CAF50;
+    color: white;
+}
+
+#init_menu {
+    diplay: block;
+    width: 47px;
+    border-radius: 5px;
+}
+
+#main_menu {
+    border-radius: 5px;
+    min-width:1250px;
+}
+
+#menu_items {
+    display: block;
+    float:left;
+}
+
+#toggle-wrapper {
+    display: block;
+    float: right;
+    text-align: center;
+    padding: 14px 16px;
+
+}

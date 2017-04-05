@@ -1,0 +1,37 @@
+body {
+    margin: 0;
+}
+.zoom_buttons {
+    height: 35px;
+    width: 35px;
+    position: relative;
+    margin: 2px;
+    display: block;
+}
+
+#reset {
+    margin-top: 10px;
+}
+
+/*.fa-bars:hover {
+    cursor: context-menu;
+}*/
+
+#button_wrapper {
+    position: absolute;
+    bottom: 21px;
+    right: 60px;
+}
+
+#minimap-background, #minimap-viewport {
+    position: absolute;
+    top: 386px;
+    left: 30px;
+    border: 1px black solid;
+    display:none;
+}
+
+svg {
+    border: black 1px solid;
+    margin-left: 20px;
+}

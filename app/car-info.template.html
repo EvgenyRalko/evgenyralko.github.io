@@ -1,0 +1,57 @@
+<div id="context">
+    <div id="upper-row">
+        <div class="" id="imageDiv">
+
+
+            <div id="image-wrapper">
+                <div class="slider-buttons" role="button" id="slide-left" ng-click="modalCtrl.previousImg()"></div>
+                <img ng-src="{{carImg}}" id="image">
+                <div class="slider-buttons" role="button" id="slide-right" ng-click="modalCtrl.nextImg()"></div>
+            </div>
+
+        </div>
+        <div class="" id="detailsDiv" >
+            <h1>{{theCar.brand}} {{theCar.model}}</h1>
+            <span class="car_details">Год выпуска: {{theCar.year}}</span>
+            <span class="car_details">Пробег: {{theCar.mileage}} км.</span>
+            <span class="car_details">Цвет: {{theCar.color}}</span>
+            <span class="car_details">Трансмиссия: {{theCar.transmission}}</span>
+            <span class="car_details">Двигатель: {{theCar.fuel}}</span>
+            <div id="priceDiv">
+                <span id="price">${{theCar.price}}</span>
+            </div>
+            <h3>Место: {{lotNum}}</h3>
+        </div>
+    </div>
+    <div id="lower-rows">
+        <div class="" id="optionsDiv" ng-show="theCar.options.length">
+            <h2>Дополнительные опции</h2>
+            <table>
+                <tr>
+                    <td><span class="fa fa-check-square-o"></span>Климат-контроль</td>
+                    <td><span class="fa fa-check-square-o"></span>Парктроник</td>
+                    <td><span class="fa fa-check-square-o"></span>Система стабилизации</td>
+                </tr>
+                <tr>
+                    <td><span class="fa fa-check-square-o"></span>Гидроусилитель руля</td>
+                    <td><span class="fa fa-check-square-o"></span>Круиз-контроль</td>
+                    <td><span class="fa fa-check-square-o"></span>АБС</td>
+                </tr>
+            </table>
+        </div>
+        <div class="" id="descriptionDiv">
+            <h2>Описание</h2>
+            <blockquote>
+                {{theCar.description}}
+            </blockquote>
+        </div>
+        <div class="" id="contactsDiv">
+            <h2>Контакты</h2>
+            <b>Имя: {{theCar.owner.name}}</b>
+            <div id="contacts-wrapper">
+                <p><span class="fa fa-mobile-phone contacts-icon"></span>{{theCar.owner.phone}}</p>
+                <p><span class="fa fa-envelope-o contacts-icon"></span>{{theCar.owner.email}}</p>
+            </div>
+        </div>
+    </div>
+</div>
