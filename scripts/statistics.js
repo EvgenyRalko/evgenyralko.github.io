@@ -1,4 +1,4 @@
-
+(function () {
     var car3000 = [],
         car7000 = [],
         car10000 = [],
@@ -95,5 +95,6 @@
         var num = uniqueMakes[v];
         uniqueMakesTotal.push(num);
     }
+}());
 
 

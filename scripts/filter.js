@@ -1,4 +1,4 @@
-
+(function () {
     var
         color = document.querySelector ('#color'),
         transmission = document.querySelector ('#transmission'),
@@ -11,7 +11,8 @@
         brand = document.querySelector ('#brand'),
         modelField = document.querySelector('#model'),
         allCarLots = document.querySelectorAll('.rect-elem'),
-        marketDbJsonParsed = JSON.parse(localStorage.marketDb);
+        marketDbJsonParsed = JSON.parse(localStorage.marketDb),
+        filterModal = document.querySelector('#filter-modal');
 
 //Add model default empty option
     var opt = document.createElement('option');
@@ -255,6 +256,4 @@
 
     var resetFilterButton = document.querySelector('#reset-filter');
     resetFilterButton.addEventListener('click',resetFilter, false);
-
-
-
+}());

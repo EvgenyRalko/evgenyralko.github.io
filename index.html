@@ -3,19 +3,16 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>FindYourCar</title>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
     <script src="scripts/libraries/angular.min.js"></script>
-    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
-    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="scripts/libraries/jquery-3.1.1.min.js"></script>
+    <script src="scripts/libraries/jquery-ui.min.js"></script>
     <script src="app/app.js"></script>
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/modal.css">
-    <link rel="stylesheet" href="css/style(check).css">
-    <link rel="stylesheet" href="css/menu.css">
 </head>
 <body ng-controller="SvgController as svgCtrl">
 
@@ -26,13 +23,11 @@
         <span class="fa fa-bars"></span>
         <!-- <a href="#" class="fa fa-bars"></a> -->
         <a href="#filter" class="menu_labels">Фильтр</a>
-        <a href="#statistics" class="menu_labels" id="statisticsBtn">Статистика</a>
-        <a href="#dashboard" class="menu_labels">Личный кабинет</a>
+        <a href="#statistics" class="menu_labels" id="statisticsBtn" ng-click="svgCtrl.carCounter()">Статистика</a>
+        <a href="#dashboard" class="menu_labels" id="dashboardBtn">Личный кабинет</a>
         <a href="#print" class="menu_labels" id="print">Печать</a>
 
     </div>
-
-
     <div id="toggle-wrapper">
         <span id="map_label">Мини-карта</span>
         <input type="checkbox" id="map_toggle">
@@ -343,9 +338,11 @@
 
     <!--Filter Modal-->
     <div class="modal" id="filter-modal" >
-        <div class="modal-content">
+        <div class="modal-content" id="filter-mod">
             <span class="close">x</span>
-            <table>
+            <h2>Найти машину</h2>
+
+            <table id="filter-table">
                 <tr>
                     <td> <span class="filter-line text-line">Модель</span></td>
                     <td><select class="filter-line" name="brand" id="brand"><option value="brand"></option></select></td>
@@ -482,8 +479,12 @@
                     <td><span>от</span><input class="filter-line" type="number" id="priceFrom"><span>до</span><input class="filter-line" type="number" id="priceTo"></td>
                 </tr>
             </table>
-            <button id="apply-filter">Применить фильтр</button>
-            <button id="reset-filter">Сбросить фильтр</button>
+
+            <div id="filter-button-set">
+                <button id="apply-filter">Применить</button>
+                <button id="reset-filter">Сбросить</button>
+            </div>
+
         </div>
 
 
@@ -496,7 +497,7 @@
         <span class="close">x</span>
 
         <div>
-            <h1>Сейчас машин на рынке: {{carCounter}}</h1>
+            <h1>Количество автомобилей на рынке: {{cCounter}}</h1>
         </div>
 <table>
     <tr>
@@ -558,16 +559,14 @@
 
 
 <script src="scripts/rect_builder.js"></script>
-<script src="scripts/minimap.js"></script>
+<script src="scripts/map.js"></script>
 <script src="scripts/car_info_modal.js"></script>
 <script src="scripts/cars.js"></script>
-<script src="scripts/car_lots.js"></script>
-<script src="scripts/selection.js"></script>
 <script src="scripts/filter.js"></script>
 <script src="scripts/statistics.js"></script>
 <script src="scripts/print.js"></script>
 <script src="scripts/spa.js"></script>
-<script src="scripts/dashboard_scheme.js"></script>
+<script src="scripts/auxilliary/dashboard_scheme.js"></script>
 
 </body>
 </html>
